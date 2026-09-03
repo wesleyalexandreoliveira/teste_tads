@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Principais Comandos do Git</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f7fb;
+        color: #222;
+        margin: 0;
+        padding: 24px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 32px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      h1, h2 {
+        color: #1f3b66;
+      }
+
+      .comando {
+        background: #eef4ff;
+        border-left: 5px solid #4a74d4;
+        padding: 14px 16px;
+        margin: 12px 0;
+        border-radius: 8px;
+      }
+
+      code {
+        background: #f3f3f3;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: Consolas, monospace;
+      }
+
+      pre {
+        background: #1e1e1e;
+        color: #f4f4f4;
+        padding: 14px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+
+      ul {
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Principais Comandos do GIT</h1>
+      <p>
+        O Git é um sistema de controle de versão distribuído, usado para acompanhar
+        alterações em arquivos e colaborar em projetos de software.
+      </p>
+
+      <h2>1. Inicialização e clonagem</h2>
+
+      <div class="comando">
+        <strong>git init</strong><br />
+        Inicializa um repositório Git em uma pasta local.
+        <pre><code>git init</code></pre>
+      </div>
+
+      <div class="comando">
+        <strong>git clone</strong><br />
+        Clona um repositório remoto para a máquina local.
+        <pre><code>git clone https://github.com/usuario/repositorio.git</code></pre>
+      </div>
+
+      <h2>2. Verificando o estado do projeto</h2>
+
+      <div class="comando">
+        <strong>git status</strong><br />
+        Mostra arquivos modificados, adicionados ou prontos para commit.
+        <pre><code>git status</code></pre>
+      </div>
+
+      <div class="comando">
+        <strong>git log</strong><br />
+        Exibe o histórico de commits do projeto.
+        <pre><code>git log</code></pre>
+      </div>
+
+      <h2>3. Adicionando e salvando alterações</h2>
+
+      <div class="comando">
+        <strong>git add</strong><br />
+        Adiciona arquivos à área de staging.
+        <pre><code>git add nome-do-arquivo.txt
+git add .</code></pre>
+      </div>
+
+      <div class="comando">
+        <strong>git commit</strong><br />
+        Salva as alterações no histórico do repositório.
+        <pre><code>git commit -m "Descrição da alteração"</code></pre>
+      </div>
+
+      <h2>4. Trabalhando com branches</h2>
+
+      <div class="comando">
+        <strong>git branch</strong><br />
+        Lista ou cria branches.
+        <pre><code>git branch
+git branch nome-da-branch</code></pre>
+      </div>
+
+      <div class="comando">
+        <strong>git checkout</strong><br />
+        Alterna entre branches ou restaura arquivos.
+        <pre><code>git checkout nome-da-branch</code></pre>
+      </div>
+
+      <div class="comando">
+        <strong>git switch</strong><br />
+        Alterna de forma mais clara entre branches.
+        <pre><code>git switch nome-da-branch</code></pre>
+      </div>
+
+      <div class="comando">
+        <strong>git merge</strong><br />
+        Junta alterações de uma branch em outra.
+        <pre><code>git merge nome-da-branch</code></pre>
+      </div>
+
+      <h2>5. Sincronizando com repositórios remotos</h2>
+
+      <div class="comando">
+        <strong>git remote</strong><br />
+        Visualiza ou configura repositórios remotos.
+        <pre><code>git remote -v
+git remote add origin https://github.com/usuario/repositorio.git</code></pre>
+      </div>
+
+      <div class="comando">
+        <strong>git pull</strong><br />
+        Atualiza o repositório local com as alterações do remoto.
+        <pre><code>git pull origin main</code></pre>
+      </div>
+
+      <div class="comando">
+        <strong>git push</strong><br />
+        Envia as alterações locais para o repositório remoto.
+        <pre><code>git push origin main</code></pre>
+      </div>
+
+      <h2>6. Desfazendo alterações</h2>
+
+      <div class="comando">
+        <strong>git restore</strong><br />
+        Restaura arquivos para o estado de um commit anterior.
+        <pre><code>git restore nome-do-arquivo.txt</code></pre>
+      </div>
+
+      <div class="comando">
+        <strong>git reset</strong><br />
+        Remove alterações do staging ou reverte commits.
+        <pre><code>git reset HEAD nome-do-arquivo.txt
+git reset --hard HEAD~1</code></pre>
+      </div>
+
+      <h2>7. Trabalhando com versões e tags</h2>
+
+      <div class="comando">
+        <strong>git tag</strong><br />
+        Cria marcações para versões importantes do projeto.
+        <pre><code>git tag v1.0.0</code></pre>
+      </div>
+
+      <div class="comando">
+        <strong>git diff</strong><br />
+        Mostra as diferenças entre versões ou alterações pendentes.
+        <pre><code>git diff</code></pre>
+      </div>
+
+      <h2>8. Guardando alterações temporariamente</h2>
+
+      <div class="comando">
+        <strong>git stash</strong><br />
+        Guarda alterações temporárias sem fazer commit.
+        <pre><code>git stash
+git stash list
+git stash apply</code></pre>
+      </div>
+
+      <h2>Resumo</h2>
+      <ul>
+        <li><code>git init</code>: inicia um repositório local.</li>
+        <li><code>git clone</code>: copia um projeto de um repositório remoto.</li>
+        <li><code>git add</code>: prepara arquivos para commit.</li>
+        <li><code>git commit</code>: grava alterações no histórico.</li>
+        <li><code>git status</code>: verifica o estado do projeto.</li>
+        <li><code>git branch</code>: gerencia branches.</li>
+        <li><code>git merge</code>: junta alterações entre branches.</li>
+        <li><code>git pull</code>: atualiza com o remoto.</li>
+        <li><code>git push</code>: envia alterações para o remoto.</li>
+        <li><code>git stash</code>: salva alterações temporárias.</li>
+      </ul>
+    </div>
+  </body>
+</html>
