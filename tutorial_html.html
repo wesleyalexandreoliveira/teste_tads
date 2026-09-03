@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial de HTML - Tags principais</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --primary: #2f6fed;
+        --secondary: #eaf1ff;
+        --text: #1f2937;
+        --muted: #4b5563;
+        --border: #dbe3f0;
+        --code: #111827;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 20px 60px;
+      }
+
+      h1, h2, h3 {
+        color: var(--primary);
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      }
+
+      pre {
+        background: var(--code);
+        color: #f3f4f6;
+        padding: 16px;
+        border-radius: 10px;
+        overflow-x: auto;
+        font-size: 0.95rem;
+      }
+
+      code {
+        background: #eef2ff;
+        padding: 2px 6px;
+        border-radius: 6px;
+        color: var(--code);
+      }
+
+      ul, ol {
+        padding-left: 22px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 12px;
+      }
+
+      th, td {
+        border: 1px solid var(--border);
+        padding: 10px 12px;
+        text-align: left;
+      }
+
+      th {
+        background: var(--secondary);
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 12px;
+        display: block;
+        margin: 12px 0;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-width: 420px;
+      }
+
+      input, textarea, button, select {
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        font: inherit;
+      }
+
+      button {
+        background: var(--primary);
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Tutorial básico de HTML</h1>
+        <p>
+          HTML (HyperText Markup Language) é a linguagem usada para estruturar o conteúdo de páginas web.
+          Com ele, organizamos textos, imagens, links, formulários e muito mais.
+        </p>
+      </header>
+
+      <main>
+        <section class="card">
+          <h2>1. Estrutura básica da página</h2>
+          <p>Todo documento HTML começa com algumas tags importantes:</p>
+          <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Meu site&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+          <ul>
+            <li><strong>&lt;!DOCTYPE html&gt;</strong>: informa ao navegador que o documento é HTML5.</li>
+            <li><strong>&lt;html&gt;</strong>: envolve todo o conteúdo da página.</li>
+            <li><strong>&lt;head&gt;</strong>: contém configurações e metadados.</li>
+            <li><strong>&lt;body&gt;</strong>: contém o conteúdo visível da página.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>2. Títulos e parágrafos</h2>
+          <p>Usamos títulos para organizar o conteúdo:</p>
+          <pre>&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Seção menor&lt;/h3&gt;
+
+&lt;p&gt;Este é um parágrafo de texto.&lt;/p&gt;</pre>
+
+          <h1>Título principal</h1>
+          <h2>Subtítulo</h2>
+          <h3>Seção menor</h3>
+          <p>Este é um parágrafo de texto.</p>
+        </section>
+
+        <section class="card">
+          <h2>3. Formatação de texto</h2>
+          <p>Existem tags para destacar partes do texto:</p>
+          <pre>&lt;strong&gt;Texto importante&lt;/strong&gt;
+&lt;em&gt;Texto em itálico&lt;/em&gt;
+&lt;u&gt;Texto sublinhado&lt;/u&gt;
+&lt;mark&gt;Texto marcado&lt;/mark&gt;</pre>
+
+          <p><strong>Texto importante</strong> e <em>texto em itálico</em>. Também pode ter <u>texto sublinhado</u> e <mark>texto marcado</mark>.</p>
+        </section>
+
+        <section class="card">
+          <h2>4. Listas</h2>
+          <p>Podemos criar listas ordenadas e não ordenadas:</p>
+          <pre>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Primeiro&lt;/li&gt;
+  &lt;li&gt;Segundo&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+          </ul>
+
+          <ol>
+            <li>Primeiro</li>
+            <li>Segundo</li>
+          </ol>
+        </section>
+
+        <section class="card">
+          <h2>5. Links e imagens</h2>
+          <p>Para criar links e inserir imagens:</p>
+          <pre>&lt;a href="https://www.google.com" target="_blank"&gt;Visite o Google&lt;/a&gt;
+
+&lt;img src="https://via.placeholder.com/300" alt="Imagem de exemplo"&gt;</pre>
+
+          <a href="https://www.google.com" target="_blank">Visite o Google</a>
+          <img src="https://via.placeholder.com/300x180" alt="Imagem de exemplo" />
+        </section>
+
+        <section class="card">
+          <h2>6. Tabelas</h2>
+          <p>As tabelas ajudam a organizar dados em linhas e colunas:</p>
+          <pre>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nome&lt;/th&gt;
+    &lt;th&gt;Idade&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ana&lt;/td&gt;
+    &lt;td&gt;22&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+          <table>
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+            </tr>
+            <tr>
+              <td>Ana</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>Bruno</td>
+              <td>25</td>
+            </tr>
+          </table>
+        </section>
+
+        <section class="card">
+          <h2>7. Formulários</h2>
+          <p>Com o elemento <strong>&lt;form&gt;</strong>, criamos campos para entrada de dados:</p>
+          <pre>&lt;form&gt;
+  &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+  &lt;input type="text" id="nome" name="nome"&gt;
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+          <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" />
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" />
+
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <h2>8. Tags semânticas</h2>
+          <p>Tags semânticas deixam o HTML mais organizado e acessível:</p>
+          <pre>&lt;header&gt;Cabeçalho&lt;/header&gt;
+&lt;nav&gt;Menu de navegação&lt;/nav&gt;
+&lt;main&gt;Conteúdo principal&lt;/main&gt;
+&lt;section&gt;Seção&lt;/section&gt;
+&lt;article&gt;Artigo&lt;/article&gt;
+&lt;footer&gt;Rodapé&lt;/footer&gt;</pre>
+
+          <ul>
+            <li><code>&lt;header&gt;</code>: área do cabeçalho</li>
+            <li><code>&lt;nav&gt;</code>: navegação</li>
+            <li><code>&lt;main&gt;</code>: conteúdo principal</li>
+            <li><code>&lt;section&gt;</code>: seção da página</li>
+            <li><code>&lt;footer&gt;</code>: rodapé</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>9. Quebra de linha e divisão</h2>
+          <pre>&lt;br&gt;  // quebra de linha
+&lt;div&gt;Bloco genérico&lt;/div&gt;
+&lt;span&gt;Texto inline&lt;/span&gt;</pre>
+
+          <p>Primeira linha<br />Segunda linha</p>
+          <div>Este é um bloco com &lt;div&gt;</div>
+          <span>Este texto está dentro de um &lt;span&gt;</span>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
